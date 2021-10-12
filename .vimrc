@@ -1,4 +1,5 @@
 syntax on
+set guifont=Monaco:h16
 set laststatus=2
 set encoding=UTF-8
 
@@ -10,6 +11,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -40,4 +43,6 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
+
+
 
