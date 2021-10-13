@@ -1,9 +1,16 @@
 syntax on
+set nocompatible
 set guifont=Monaco:h16
 set laststatus=2
 set encoding=UTF-8
-
+set t_Co=256
 set foldcolumn=2
+filetype indent on
+set autoindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set autochdir
 
 
 call plug#begin('~/.vim/plugged')
@@ -11,6 +18,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.vim'
+Plug 'vimwiki/vimwiki'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
@@ -43,6 +52,11 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
+
+let g:vim_markdown_folding_disabled = 1
+
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 
 
